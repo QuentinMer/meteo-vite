@@ -1,5 +1,3 @@
-import { Coords } from "leaflet";
-
 export interface Weather {
     description: string;
     icon: string;
