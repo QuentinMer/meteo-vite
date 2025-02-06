@@ -1,0 +1,15 @@
+.matin {
+    background-image: url('./assets/img/matin.png');
+  }
+  
+  .midi {
+    background-image: url('./assets/img/midi.png');
+  }
+  
+  .soir {
+    background-image: url('./assets/img/soir.png');
+  }
+  
+  .nuit {
+    background-image: url('./assets/img/nuit.png');
+  }
