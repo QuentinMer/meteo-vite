@@ -27,7 +27,7 @@ const DonneeMeteo = () => {
   const mapRef = useRef<L.Map | null>(null);
 
   const convertTimezoneToTime = (timezone: number): string => {
-    const utcTime = new Date();
+    const utcTime = new Date(); // Date.UTC pour formater à l'UTC
     const localTime = new Date(utcTime.getTime() + timezone * 1000);
 
     const hours = localTime.getUTCHours().toString().padStart(2, "0");
@@ -95,7 +95,7 @@ const DonneeMeteo = () => {
               {convertTimezoneToTime(weatherData.timezone)}
             </p>
             <p className="absolute top-32 right-2 text-2xl font-bold">
-              {weatherData.main.temp}°C
+              {weatherData.main.temp}
             </p>
             <p className="absolute bottom-2 font-black text-2xl">
               Humidité: {weatherData.main.humidity}%
@@ -118,7 +118,7 @@ const DonneeMeteo = () => {
         <div className="">
            {weatherData && weatherData.coord ? (
             <MapContainer
-              center={[position.lat, position.lon]} // Position initiale
+              center={[position.lat, position.lon]} 
               zoom={13}
               scrollWheelZoom={false}
               ref={(mapInstance) => {
